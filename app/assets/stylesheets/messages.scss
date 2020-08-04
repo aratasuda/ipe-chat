@@ -1,3 +1,164 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./color";
+
+.main {
+    height: calc(100vh - 80px);  // vhは「viewport height」の略で、viewport の高さ（ブラウザの高さ）に対する指定です。100vhで表示しているスマホやPCのウィンドウサイズの100%という意味になります 
+    .chat {
+        padding: 0 20px;
+        height: calc(100vh - 160px);
+        background-color: $back-color;
+        
+        .flame {
+            max-height: calc(100vh - 170px);
+            overflow-y: auto;
+            
+            padding-left: 150px;
+            padding-right: 150px;
+          
+            position: relative;
+            height: 100%;
+            
+            display: flex;
+            justify-content: center;
+            
+            
+            
+    
+            .font_test{
+                font-weight: bold;
+                
+            }
+            
+            .flame2{
+
+                width: 100%;
+                border-radius: 5px;
+
+                position: absolute;
+                bottom: 0;
+
+                display: flex;
+                justify-content: space-between;
+                background-color: $form-color;
+                
+
+                .flame3{
+                    
+            
+
+                    p{
+                        padding: 3px;
+
+                        .font_test{
+                            padding: 5px;
+                        }
+
+                        .date{
+                            font-size: 80%;
+                            color: #c0c0c0 ;
+
+                        }
+                    }
+
+                    
+                    .honbun{
+                        padding: 5px;
+                    }
+
+                    width: 100%;
+                    margin: 10px;
+                    
+                    
+
+                }
+                
+                .flame4{
+                    text-align: right;
+
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        justify-content: center;
+                        
+                        
+
+                        li{
+                            background-color: $botton-color;
+                            margin: 5px;
+                            border-radius: 5px;
+                            
+                            height: 30px;
+                            width: 160px;
+                            
+
+                            display: flex;
+                            justify-content: center;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                    
+                            a{
+                                text-decoration: none;
+                                display: block; 
+                                padding: 3px;
+                                font-weight: bold;
+                            }
+
+                        
+
+                        }
+                    }
+
+                }           
+
+            }
+        
+        }
+    } 
+    .chat-form {
+        height: 80px;
+        padding: 20px;
+        background-color: $sub-color;
+        display: flex;
+        justify-content: space-between;
+
+      .form{
+          width: 100%;
+          
+      }
+
+        input[type=text] {
+            height: 40px;
+            width: 800px;
+            border-radius: 5px;
+            
+        }
+
+        input[type=submit]{
+
+            font-weight: bold;
+            height: 40px;
+            width: 80px;
+            margin-left: 100px;
+            background-color: $main-color;
+            border-radius: 5px;
+            color: $form-color;
+            
+            
+       
+        }
+
+
+        
+
+                
+    }
+
+    
+
+} 
+    
