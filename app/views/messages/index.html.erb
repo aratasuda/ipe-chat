@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="chat">
+        <div class="flame">
+          
+          <% @messages.each do |message| %>
+            
+          <% end %>
+
+          <% unless @message.blank? %>
+          
+           <div class="flame2">
+               <div class="flame3">
+                   <p><span class="font_test">test</span>
+                    <span class="date"><%= @messages.created_at.strftime("%Y/%m/%d(%a) %H:%M") %></span></p>
+                    
+                   <p class="honbun"><%= @messages.content %></p>
+               </div>
+
+               <div class="flame4">
+                   <ul>
+                       <li><a href="#">edit</a></li>
+                       <li><a href="#">delete</a></li>
+                   </ul>
+               </div>
+            </div>
+          <% @messages.each do |message| %>
+            <div class="flame2">
+            <% message %>
+            </div>
+
+          <% end %>
+
+          <% else %>
+                <div class="flame2">
+                    <p>No message yet.</p>
+                </div>
+          <% end %>    
+        </div>
+    </div>
+    
+    <div class="chat-form">
+       <form>
+         <input type="text">
+         <input type="submit" value="SEND"> 
+       </form>
+    </div>
+</div>
