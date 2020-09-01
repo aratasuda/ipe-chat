@@ -1,10 +1,10 @@
 class MessagesController < ApplicationController
   
     def index
-        @messages = Message.all
+        @messages = Message.includes(:user).all
         @message = Message.new
-    
-    
+        
+
     end
 
     def create
