@@ -20,9 +20,12 @@
       </div>
 
       <ul>
-          <li><a href="#">SIGNUP</a></li>
-          <li><a href="#">LOGIN</a></li>
+         <% if current_user %>
           <li><a href="#">LOGOUT</a></li>
+        <% else %>
+          <li><%= link_to "SIGNUP", signup_path %></li>
+          <li><%= link_to "LOGIN", login_path %></li>
+        <% end %>
       </ul>
     </header>
     <% if notice %>
