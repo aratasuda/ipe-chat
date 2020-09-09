@@ -35,7 +35,7 @@ class MessagesController < ApplicationController
 
     def destroy
         @message = Message.find(params[:id])
-        if @message.user_id == current_user.id && @message.destroy(update_params)
+        if @message.user_id == current_user.id&& @message.destroy
             redirect_to root_path, notice: '削除しました'
         else
             redirect_to root_path, notice: '削除に失敗しました'
